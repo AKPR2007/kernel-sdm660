@@ -31,6 +31,7 @@ push_message() {
         -d "disable_web_page_preview=true"
 }
 
+echo "Successfully built kernel & finished process"
 # Push message to telegram
 # push_message "
 # <b>======================================</b>
