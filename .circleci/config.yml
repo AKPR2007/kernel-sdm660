@@ -7,10 +7,10 @@ jobs:
       - run:
           name: Building #DEAGLE Kernel
           command: |
-            wget https://raw.githubusercontent.com/TianWalkzzMiku/kernel-sdm660/deagle/build-start.sh
+            wget https://raw.githubusercontent.com/AKPR2007/kernel-sdm660/deagle/build-start.sh
             bash build-start.sh stable clang
             cd kernel
-            wget https://raw.githubusercontent.com/TianWalkzzMiku/kernel-sdm660/deagle/build.sh
+            wget https://raw.githubusercontent.com/AKPR2007/kernel-sdm660/deagle/build.sh
             bash build.sh tulip newcam clang
             bash build.sh tulip oldcam clang
             bash build.sh whyred newcam clang
