@@ -4,7 +4,7 @@
 
 # Clone kernel source
 if [[ "$*" =~ "stable" ]]; then
-    git clone --depth=1 https://github.com/TianWalkzzMiku/kernel-sdm660.git -b deagle kernel
+    git clone --depth=1 https://github.com/AKPR2007/kernel-sdm660.git -b deagle kernel
     cd kernel || exit
 fi
 
@@ -31,9 +31,9 @@ push_message() {
 }
 
 # Push message to telegram
-push_message "
-<b>======================================</b>
-<b>Start Building :</b> <code>#DEAGLE Reborn</code>
-<b>Linux Version :</b> <code>$(make kernelversion | cut -d " " -f5 | tr -d '\n')</code>
-<b>Source Branch :</b> <code>$(git rev-parse --abbrev-ref HEAD)</code>
-<b>======================================</b> "
+#push_message "
+#<b>======================================</b>
+#<b>Start Building :</b> <code>#DEAGLE Reborn</code>
+#<b>Linux Version :</b> <code>$(make kernelversion | cut -d " " -f5 | tr -d '\n')</code>
+#<b>Source Branch :</b> <code>$(git rev-parse --abbrev-ref HEAD)</code>
+#<b>======================================</b> "
