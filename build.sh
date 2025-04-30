@@ -102,7 +102,7 @@ fi
 
 # Push message if build error
 if ! [ -a "$KERNEL_IMG" ]; then
-    echo CompileFailed
+    echo "Failed to build kernel"
     # push_message "<b>Failed building kernel for <code>$DEVICE-$CONFIGVERSION</code> Please fix it...!</b>"
     exit 1
 fi
@@ -118,6 +118,7 @@ cp "$AK3_DIR"/*.zip kernel-done/
 BUILD_END=$(date +"%s")
 DIFF=$((BUILD_END - BUILD_START))
 
+echo "Successfully built kernel"
 # Push kernel to telegram
 # push_document "$AK3_DIR/$ZIP_NAME" "
 # <b>device :</b> <code>$DEVICE</code>
