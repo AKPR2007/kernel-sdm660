@@ -20,6 +20,6 @@ jobs:
             bash build.sh tulip oldcam oc clang
             bash build.sh whyred newcam oc clang
             bash build.sh whyred oldcam oc clang
-            wget https://raw.githubusercontent.com/TianWalkzzMiku/kernel-sdm660/deagle/build-final.sh
+            wget https://raw.githubusercontent.com/AKPR2007/kernel-sdm660/deagle/build-final.sh
             bash build-final.sh clang
             
