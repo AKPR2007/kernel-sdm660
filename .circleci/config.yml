@@ -22,4 +22,5 @@ jobs:
             bash build.sh whyred oldcam oc clang
             wget https://raw.githubusercontent.com/AKPR2007/kernel-sdm660/deagle/build-final.sh
             bash build-final.sh clang
-            
+      - store_artifacts:
+          path: /root/project/kernel/kernel-done
