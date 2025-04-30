@@ -30,7 +30,7 @@ push_message() {
         -d "disable_web_page_preview=true"
 }
 
-echo "Build Started Successfully"
+echo "Build started successfully"
 # Push message to telegram
 #push_message "
 #<b>======================================</b>
