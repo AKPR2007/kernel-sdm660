@@ -61,7 +61,7 @@ fi
 
 if [[ "$*" =~ "ksun" ]]; then
     export KSUNVER="_KSUN"
-elif [[ "$*" =~ "noksun" ]]; then
+elif [[ "$*" =~ "noroot" ]]; then
     export KSUNVER="_no-KSUN"
 fi
 
