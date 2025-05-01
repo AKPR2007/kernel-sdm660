@@ -5,7 +5,7 @@ jobs:
       - image: okta10/docker:ubuntu
     steps:
       - run:
-          name: Building #DEAGLE Kernel
+          name: Building DEAGLE Kernel
           command: |
             wget https://raw.githubusercontent.com/AKPR2007/kernel-sdm660/deagle/build-start.sh
             bash build-start.sh stable clang
@@ -17,9 +17,13 @@ jobs:
             bash build.sh tulip newcam oc clang noksun
             bash build.sh tulip oldcam oc clang noksun
             git apply -R oc.patch
+            curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -
+            curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -s next-susfs
             bash build.sh tulip newcam clang ksun
             bash build.sh tulip oldcam clang ksun
             git apply oc.patch
+            curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -
+            curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -s next-susfs
             bash build.sh tulip newcam oc clang ksun
             bash build.sh tulip oldcam oc clang ksun
             wget https://raw.githubusercontent.com/AKPR2007/kernel-sdm660/deagle/build-final.sh
