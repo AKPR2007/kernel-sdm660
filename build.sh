@@ -9,7 +9,7 @@ KERNEL_DIR=$PWD
 BUILD_START=$(date +"%s")
 
 # Name and version of kernel
-KERNEL_NAME="#DEAGLE-Reborn"
+KERNEL_NAME="DEAGLE-Reborn"
 KERNEL_VERSION="V20"
 
 # Device name
@@ -38,8 +38,8 @@ export CHAT_ID
 export BOT_TOKEN
 export ARCH=arm64
 export SUBARCH=arm64
-export KBUILD_BUILD_USER="Tiann"
-export KBUILD_BUILD_HOST="MobZ"
+export KBUILD_BUILD_USER="Ahanf"
+export KBUILD_BUILD_HOST="DebianLinux"
 AK3_DIR=$KERNEL_DIR/ak3-$DEVICE
 KERNEL_IMG=$KERNEL_DIR/out/arch/arm64/boot/Image.gz
 ZIP_NAME="$KERNEL_NAME"_"$DEVICE""$LOCALVERSION"_"$CONFIGVERSION".zip
