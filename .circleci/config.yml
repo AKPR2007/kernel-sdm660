@@ -17,11 +17,11 @@ jobs:
             bash build.sh tulip newcam oc clang
             bash build.sh tulip oldcam oc clang
             git apply -R oc.patch
-            bash build.sh tulip newcam oc ksun clang
-            bash build.sh tulip oldcam oc ksun clang
+            bash build.sh tulip newcam oc clang ksun
+            bash build.sh tulip oldcam oc clang ksun
             git apply oc.patch
-            bash build.sh tulip newcam oc ksun clang
-            bash build.sh tulip oldcam oc ksun clang
+            bash build.sh tulip newcam oc clang ksun
+            bash build.sh tulip oldcam oc clang ksun
             wget https://raw.githubusercontent.com/AKPR2007/kernel-sdm660/deagle/build-final.sh
             bash build-final.sh clang
       - store_artifacts:
