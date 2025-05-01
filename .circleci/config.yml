@@ -11,11 +11,11 @@ jobs:
             bash build-start.sh stable clang
             cd kernel
             wget https://raw.githubusercontent.com/AKPR2007/kernel-sdm660/deagle/build.sh
-            bash build.sh tulip newcam clang noksun
-            bash build.sh tulip oldcam clang noksun
+            bash build.sh tulip newcam clang noroot
+            bash build.sh tulip oldcam clang noroot
             git apply oc.patch
-            bash build.sh tulip newcam oc clang noksun
-            bash build.sh tulip oldcam oc clang noksun
+            bash build.sh tulip newcam oc clang noroot
+            bash build.sh tulip oldcam oc clang noroot
             git apply -R oc.patch
             curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -
             curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -s next-susfs
