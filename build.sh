@@ -42,7 +42,6 @@ export KBUILD_BUILD_USER="Ahanf"
 export KBUILD_BUILD_HOST="DebianLinux"
 AK3_DIR=$KERNEL_DIR/ak3-$DEVICE
 KERNEL_IMG=$KERNEL_DIR/out/arch/arm64/boot/Image.gz
-ZIP_NAME="$KERNEL_NAME"_"$DEVICE""$LOCALVERSION"_"$CONFIGVERSION".zip
 
 # Setup toolchain
 if [[ "$*" =~ "clang" ]]; then
@@ -59,6 +58,14 @@ elif [[ "$*" =~ "gcc" ]]; then
     LLDV="$("$GCC_DIR"/bin/aarch64-elf-ld.lld --version | head -n 1)"
     export KBUILD_COMPILER_STRING="$GCCV - $BINV - $LLDV"
 fi
+
+if [[ "$*" =~ "ksun" ]]; then
+    export KSUNVER="_KSUN"
+elif [[ "$*" =~ "noksun" ]]; then
+    export KSUNVER="_no-KSUN"
+fi
+
+ZIP_NAME="$KERNEL_NAME"_"$DEVICE""$LOCALVERSION""$KSUNVER"_"$CONFIGVERSION".zip
 
 # Telegram setup
 push_message() {
