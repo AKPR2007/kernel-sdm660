@@ -11,14 +11,14 @@ jobs:
             bash build-start.sh stable clang
             cd kernel
             wget https://raw.githubusercontent.com/AKPR2007/kernel-sdm660/deagle/build.sh
-            bash build.sh tulip newcam clang
-            bash build.sh tulip oldcam clang
+            bash build.sh tulip newcam clang noksun
+            bash build.sh tulip oldcam clang noksun
             git apply oc.patch
-            bash build.sh tulip newcam oc clang
-            bash build.sh tulip oldcam oc clang
+            bash build.sh tulip newcam oc clang noksun
+            bash build.sh tulip oldcam oc clang noksun
             git apply -R oc.patch
-            bash build.sh tulip newcam oc clang ksun
-            bash build.sh tulip oldcam oc clang ksun
+            bash build.sh tulip newcam clang ksun
+            bash build.sh tulip oldcam clang ksun
             git apply oc.patch
             bash build.sh tulip newcam oc clang ksun
             bash build.sh tulip oldcam oc clang ksun
