@@ -17,8 +17,8 @@ elif [[ "$*" =~ "gcc" ]]; then
 fi
 
 # Clone anykernel3
-git clone --depth=1 https://github.com/TianWalkzzMiku/AK3-4.4.git -b whyred ak3-whyred
-git clone --depth=1 https://github.com/TianWalkzzMiku/AK3-4.4.git -b tulip ak3-tulip
+# git clone --depth=1 https://github.com/AKPR2007/AK3-4.4.git -b whyred ak3-whyred
+git clone --depth=1 https://github.com/AKPR2007/AK3-4.4.git -b tulip ak3-tulip
 
 # Telegram setup
 push_message() {
