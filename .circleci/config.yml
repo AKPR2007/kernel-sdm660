@@ -30,3 +30,5 @@ jobs:
             bash build-final.sh clang
       - store_artifacts:
           path: /root/project/kernel/kernel-done
+      - store_artifacts:
+          path: /root/project/kernel/out/arch/arm64/boot
